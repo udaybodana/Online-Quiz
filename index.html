@@ -30,9 +30,195 @@
                     Oriented)</label>
             </div>
 
-        <footer class="designer-copyright">
+            <div class="question-box">
+                <h3>3. What does the acronym HTML stand for?</h3>
+                <input type="text" name="q3" placeholder="Enter the full form here..." required>
+            </div>
+
+            <div class="question-box">
+                <h3>4. Self-Assessment: Rate your Web Dev skill</h3>
+                <p style="font-size: 0.85rem; color: #6b7280; margin-bottom: 10px;">Range: 1 (Beginner) to 10 (Pro)</p>
+                <input type="range" name="q4" min="1" max="10" value="5">
+            </div>
+
+            <div class="question-box">
+                <h3>5. Documentation: Upload Profile/Resume</h3>
+                <input type="file" name="resume">
+            </div>
+
+            <div class="btn-group">
+                <button type="submit">Submit Assessment</button>
+                <button type="reset">Clear All Answers</button>
+            </div>
+        </form>
+    </div>
+
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --bg: #f5f3ff;
+            --text: #1f2937;
+            --border: #ddd6fe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 40px 20px;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .quiz-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .intro-text {
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .question-box {
+            margin-bottom: 35px;
+            padding: 20px;
+            background: #faf5ff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            color: #4c1d95;
+        }
+
+        .option-group {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: 5px;
+            accent-color: var(--primary);
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button[type="submit"] {
+            background: var(--primary);
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background: #6d28d9;
+            transform: translateY(-2px);
+        }
+
+        button[type="reset"] {
+            background: #ede9fe;
+            color: var(--primary);
+        }
+
+        button[type="reset"]:hover {
+            background: #ddd6fe;
+        }
+
+        .designer-copyright {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+
+        .designer-copyright span {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+            .quiz-card {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <footer class="designer-copyright">
         © Designed & Developed by <span>Uday</span>
     </footer>
-</body>
-</html>
 
+</body>
+
+</html>
